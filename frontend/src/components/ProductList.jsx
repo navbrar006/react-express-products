@@ -7,8 +7,7 @@ function ProductList() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/products")
+    axios.get("/api/products")
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
